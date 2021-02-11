@@ -1,3 +1,5 @@
 # X7_project
 
-conventions
+conventions:
+
+href="comp10140.html"  becomes  href="{% url 'webpage2'%}"
