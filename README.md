@@ -2,4 +2,4 @@
 
 conventions:
 
-href="comp10140.html"  becomes  href="{% url 'webpage2'%}"
+href="comp10140.html"  becomes  href="{% url 'comp10140'%}"
