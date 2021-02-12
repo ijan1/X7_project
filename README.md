@@ -2,6 +2,7 @@
 
 <p><img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">The team project of University of Manchester student: Alexandru Stoica, David Santoso, Diana Constantin, Ivan Zhechev, Long Hei Chiu, Sabreenderjit  Gurjit Singh and Ruyi Zhang. The project is a website where students from University of Manchester can donate items to other students who are in need of them.</p>
 
+
 ## Getting started
 ### Setting up 
 After being added as a collaborator, if you haven't already, create an [SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (or use an existing one) and [add it](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) to your GitHub account. ([GitHub is moving away from account password authentication, so token- or SSH-based authentication is preferred.](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)) If you have used HTTPS to clone the URL you can easily change to SSH with ```git remote set-url origin git@github.com:ijan1/X7_project.git```, otherwise just clone the repository in a folder with ```git clone git@github.com:ijan1/X7_project.git```. ```git clone``` implicitly adds *origin* as the remote, so if you wish to change it to something else you have to do so with ```git remote add <shortname> git@github.com:ijan1/X7_project.git```.
