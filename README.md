@@ -1,12 +1,14 @@
 # Pass It On  
 
-<img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">A first-year University of Manchester group website, built to help connect students who want to donate unneeded items (e.g., clothes, textbooks, etc) to other students who could use them. Technologies used are **Bootstrap** for the front-end, and **Django** for the back-end.⠀  ⠀  
+<img align="right" width="300" height="200" src="https://i.imgur.com/A697At2.png">
+
+<img align="left" width="260" height="110" src="https://i.imgur.com/ecBenF9.jpg">A first-year University of Manchester group project website, built to help connect students who want to donate unneeded items (e.g., clothes, textbooks, etc) to other students who could use them. Developed during the months of February and March, the aim behind using GitHub was to learn how to coordinate as a team and learn essential workflow skills. Technologies used to develop the website are **Bootstrap** for the front-end, and **Django** for the back-end.⠀  ⠀  
 <p>⠀  </p>
 
 
 ## Getting started
 ### Setting up 
-After being added as a collaborator, if you haven't already, create an [SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (or use an existing one) and [add it](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) to your GitHub account. ([GitHub is moving away from account password authentication, so token- or SSH-based authentication is preferred.](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)) If you have used HTTPS to clone the URL you can easily change to SSH with ```git remote set-url origin git@github.com:ijan1/X7_project.git```, otherwise just clone the repository in a folder with ```git clone git@github.com:ijan1/X7_project.git```. ```git clone``` implicitly adds *origin* as the remote, so if you wish to change it to something else you have to do so with ```git remote add <shortname> git@github.com:ijan1/X7_project.git```.
+After being added as a collaborator, if you haven't already, create an [SSH key](https://docs.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent) (or use an existing one) and [add it](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account) to your GitHub account. If you have used HTTPS to clone the URL you can easily change to SSH with ```git remote set-url origin git@github.com:ijan1/X7_project.git```, otherwise just clone the repository in a folder with ```git clone git@github.com:ijan1/X7_project.git```. ```git clone``` implicitly adds *origin* as the remote, so if you wish to change it to something else you have to do so with ```git remote add <shortname> git@github.com:ijan1/X7_project.git```. [GitHub is moving away from account password authentication, so token- or SSH-based authentication is preferred.](https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/)
 
 ### Using git
 #### Staging and commiting
@@ -27,9 +29,9 @@ To merge a new feature to your team's corresponding branch.
 2. Make sure the **HEAD** is pointing to the correct receiving branch. Usually either ```frontend``` or ```backend```.  
 2.1. If on the front-end team ```git checkout frontend```  
 2.2. If on the back-end team ```git checkout backend```  
-3. Fetch to make sure you are using the latest commit. ```git fetch origin```  
+3. Fetch to make sure you are using the latest commit ```git fetch origin```  
 3.1. In case of a conflict, a new branch could be created to resolve the conflict before merging.
-4. Pull the latest update. ```git pull origin```  
+4. Pull the latest update ```git pull origin```  
 5. Merge the two branches ```git merge <branch_name>```
 
 This will merge ```<branch_name>``` into another branch.
