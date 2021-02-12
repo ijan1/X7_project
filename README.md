@@ -1,6 +1,6 @@
 # Pass It On  
 
-<p><img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">A first-year University of Manchester group website, built to help connect students who want to donate unneeded items (e.g., clothes, textbooks, etc) to other students who could use them. Technologies used are **Bootstrap** for the front-end, and **Django** for the back-end. </p>⠀
+<img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">A first-year University of Manchester group website, built to help connect students who want to donate unneeded items (e.g., clothes, textbooks, etc) to other students who could use them. Technologies used are **Bootstrap** for the front-end, and **Django** for the back-end.⠀
 
 
 ## Getting started
