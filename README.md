@@ -1,6 +1,6 @@
 # X7_project  
 
-<p><img align="left" width="260" height="100" src="https://assets.manchester.ac.uk/logos/hi-res/TAB_UNI_MAIN_logo/White_grounds/TAB_col_white_background.jpg">The team project of University of Manchester student: Alexandru Stoica, David Santoso, Diana Constantin, Ivan Zhechev, Long Hei Chiu, Sabreenderjit  Gurjit Singh and Ruyi Zhang. The project is a website where students from University of Manchester can donate items to other students who are in need of them.</p>
+<p><img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">The team project of University of Manchester student: Alexandru Stoica, David Santoso, Diana Constantin, Ivan Zhechev, Long Hei Chiu, Sabreenderjit  Gurjit Singh and Ruyi Zhang. The project is a website where students from University of Manchester can donate items to other students who are in need of them.</p>
 
 ## Getting started
 ### Setting up 
