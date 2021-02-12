@@ -1,6 +1,6 @@
-# X7_project  
+# Pass It On  
 
-<p><img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">The team project of University of Manchester student: Alexandru Stoica, David Santoso, Diana Constantin, Ivan Zhechev, Long Hei Chiu, Sabreenderjit  Gurjit Singh and Ruyi Zhang. The project is a website where students from University of Manchester can donate items to other students who are in need of them.</p>⠀
+<p><img align="left" width="236" height="100" src="https://i.imgur.com/ecBenF9.jpg">A first-year University of Manchester group website, built to help connect students who want to donate unneeded items (e.g., clothes, textbooks, etc) to other students who could use them. Technologies used are **Bootstrap** for the front-end, and **Django** for the back-end. </p>⠀
 
 
 ## Getting started
@@ -51,3 +51,9 @@ This will merge ```<branch_name>``` into another branch.
 !!!! [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf) !!!!  
 !!!! [Git undo/In case of conflict](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/) !!!!
 [Git Head](https://www.git-tower.com/learn/git/glossary/head)
+
+## Developed by
+### Front-end team:
+Diana Constantin, Ivan Zhechev, Long Hei Chiu, Sabreenderjit  Gurjit Singh
+### Back-end team:
+Alexandru Stoica, David Santoso, Ruyi Zhang
