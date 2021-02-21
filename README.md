@@ -53,8 +53,11 @@ This will merge ```<branch_name>``` into another branch.
 [Git Advanced Merging](https://git-scm.com/book/en/v2/Git-Tools-Advanced-Merging)  
 !!!! [Interactive Git Branching tutorial](https://learngitbranching.js.org/) !!!!  
 !!!! [Git cheatsheet](https://training.github.com/downloads/github-git-cheat-sheet.pdf) !!!!  
-!!!! [Git undo/In case of conflict](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/) !!!!
-[Git Head](https://www.git-tower.com/learn/git/glossary/head)
+!!!! [Git undo/In case of conflict](https://docs.gitlab.com/ee/topics/git/numerous_undo_possibilities_in_git/) !!!!  
+[Git Head](https://www.git-tower.com/learn/git/glossary/head)  
+
+## Bootstrap 5 documentation
+[Documentation](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 
 ## Developed by
 ### Front-end team:
