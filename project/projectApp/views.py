@@ -11,7 +11,9 @@ class ContactView(View):
 
     def post(self, request, *args, **kwargs):
         form = forms.ContactForm(request.POST)
-        print(form)
         if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            print("the email is " + str(email) + " and the pass is " + str(password))
             return redirect('contact')
         return render(request, 'Login.html', {'form' : form})
