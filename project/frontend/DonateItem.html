@@ -22,18 +22,25 @@
 			</datalist> -->
 			<form class="row g-3 needs-validation" novalidate>
 				<div class="col-md-4">
+					<div>
 					<label for="itemName" class="form-label">Item name</label>
 					<input type="text" class="form-control" id="itemName" required>
 					<div class="invalid-feedback">
 						Please enter a name!
 					</div>
 					<div class="valid-feedback"></div>
-					<label for="image-1" class=form-label">Image 1</label>
-					<input type="file" class="form-control" id="image-1" required>
+					</div>
+
+					<div id="image-1">
+					<label for="image-1" class="form-label">Image 1</label>
+					<input type="file" class="form-control" required>
 					<div class="invalid-feedback">
 						Please attach an image!
 					</div>
-					<button type="button" class="btn btn-secondary" onclick="addImageField()">Add image</button>
+					</div>
+
+
+					<button type="button" class="btn btn-success btn-sm" onclick="addImageField()">Add image</button>
 				</div>
 
 				<div class="col-12">
@@ -46,7 +53,9 @@
 <script>
 	var imageFieldsCount = 1;
 	function addImageField(){
-		alert("How does this work");
+			var imageDiv = document.getElementById("image-" + imageFieldsCount);
+			imageFieldsCount += 1;
+			imageDiv.insertAdjacentHTML('afterend', '<label for="image-' + imageFieldsCount + '" class="form-label">Image ' + imageFieldsCount + '</label> <input type="file" class="form-control" id="image-' + imageFieldsCount + '" required>');
 		}
 
 	(function () {
