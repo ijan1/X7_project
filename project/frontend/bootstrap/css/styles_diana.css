@@ -22,11 +22,15 @@ body {
     color: #fff;
  }
 
+.bg-color{
+    background-color: #8785db;
+}
+
 .nav-item {
 	  padding: 7px;
   }
 
-  .btn-primary {
+.btn-primary {
 	  background-color: #3dc990;
 	  border-color: #3dc990;
 	  border-radius: 50px;
@@ -34,10 +38,21 @@ body {
 
   }
 
-  a.nav-link {
+a.nav-link {
 	  font-weight: bold;
 	  color: #2c3e50;
   }
+
+.jumbotrons-heading {
+      color: #fff;
+      font-size: 3rem;
+      font-family: 'Roboto', sans-serif;
+}
+.jumbotrons-subheading {
+      color: #fff;
+      font-size: 1.25rem;
+      font-family: 'Roboto', sans-serif;
+}
 
   #grey {
 	  color: rgb(175, 175, 175);
@@ -48,6 +63,9 @@ body {
 
   }
 
+  #aboutbutton {
+      
+}
   #accountbutton {
 	  width: 230px;
 	  height: 50px;
