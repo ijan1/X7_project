@@ -23,24 +23,25 @@
 			<form class="row g-3 needs-validation" novalidate>
 				<div class="col-md-4">
 					<div>
-					<label for="itemName" class="form-label">Item name</label>
-					<input type="text" class="form-control" id="itemName" required>
-					<div class="invalid-feedback">
-						Please enter a name!
-					</div>
-					<div class="valid-feedback"></div>
+						<label for="itemName" class="form-label">Item name</label>
+						<input type="text" class="form-control" id="itemName" required>
+						<div class="invalid-feedback">
+							Please enter a name!
+						</div>
+						<div class="valid-feedback"></div>
 					</div>
 
 					<div id="image-1">
-					<label for="image-1" class="form-label">Image 1</label>
-					<input type="file" class="form-control" required>
-					<div class="invalid-feedback">
-						Please attach an image!
-					</div>
+						<label for="image-1" class="form-label">Image 1</label>
+						<input type="file" class="form-control" accept="image/*" required>
+						<div class="invalid-feedback">
+							Please attach an image!
+						</div>
 					</div>
 
 
 					<button type="button" class="btn btn-success btn-sm" onclick="addImageField()">Add image</button>
+					<button type="button" class="btn btn-danger btn-sm" onclick="removeImageField()">Remove image</button>
 				</div>
 
 				<div class="col-12">
@@ -53,9 +54,18 @@
 <script>
 	var imageFieldsCount = 1;
 	function addImageField(){
-			var imageDiv = document.getElementById("image-" + imageFieldsCount);
-			imageFieldsCount += 1;
-			imageDiv.insertAdjacentHTML('afterend', '<label for="image-' + imageFieldsCount + '" class="form-label">Image ' + imageFieldsCount + '</label> <input type="file" class="form-control" id="image-' + imageFieldsCount + '" required>');
+			if(imageFieldsCount < 5){
+					var imageDiv = document.getElementById("image-" + imageFieldsCount);
+					imageFieldsCount += 1;
+					imageDiv.insertAdjacentHTML('afterend', '<div id="image-' + imageFieldsCount + '"> <label for="image-' + imageFieldsCount + '" class="form-label">Image ' + imageFieldsCount + '</label> <input type="file" class="form-control" accept="image/*" required></div>');
+				}
+		}
+	function removeImageField(){
+			if(imageFieldsCount > 1){
+					var imageDiv = document.getElementById("image-" + imageFieldsCount);
+					imageDiv.remove();
+					imageFieldsCount -= 1;
+				}
 		}
 
 	(function () {
