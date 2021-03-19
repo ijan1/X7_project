@@ -23,5 +23,5 @@ from projectApp import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path("", views.ContactView.as_view(), name = "contact"),
+    path("", views.LoginView.as_view(), name = "login"),
 ]

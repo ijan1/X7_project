@@ -5,15 +5,16 @@ from projectApp import forms
 
 # Create your views here.
 
-class ContactView(View):
+class LoginView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Login.html")
 
     def post(self, request, *args, **kwargs):
-        form = forms.ContactForm(request.POST)
+        form = forms.LoginForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
             password = form.cleaned_data['password']
             print("the email is " + str(email) + " and the pass is " + str(password))
-            return redirect('contact')
+
+            return redirect('login')
         return render(request, 'Login.html', {'form' : form})
