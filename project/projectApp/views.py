@@ -18,3 +18,25 @@ class LoginView(View):
 
             return redirect('login')
         return render(request, 'Login.html', {'form' : form})
+
+
+class AboutPageView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "AboutPage.html")
+
+
+class AddItemView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "AddItem.html")
+
+    def post(self, request, *args, **kwargs):
+        form = forms.AddItemForm(request.POST)
+        if form.is_valid():
+            itemName = form.cleaned_data['itemName']
+            category = form.cleaned_data['category']
+            condition = form.cleaned_data['condition']
+            description = form.cleaned_data['description']
+            print("the item " + str(itemName) + " with category " + str(category) + " and condition " + str(condition) + " and description " + str(description))
+
+            return redirect('AddItem')
+        return render(request, 'AddItem.html', {'form': form})

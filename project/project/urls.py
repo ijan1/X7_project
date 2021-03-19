@@ -23,5 +23,7 @@ from projectApp import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
+    path("", views.AddItemView.as_view(), name = 'AddItem'),
+    path("", views.AboutPageView.as_view(), name = 'AboutPage'),
     path("", views.LoginView.as_view(), name = "login"),
 ]
