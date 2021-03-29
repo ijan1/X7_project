@@ -1,231 +1,257 @@
 <!DOCTYPE html>
-<html>
-    <head>
+<html lang="en">
 
-<!-- Required meta tags -->
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap/css/styles_diana.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
+  <title>Pass it on</title>
+</head>
 
-<!-- Bootstrap CSS -->
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="bootstrap/css/styles_diana.css" />
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet"> 
-
-        <title>Pass it on</title>
-	</head>
-	<body>
-
-        <!--Navbar-->
-		<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
-			<div class="container-fluid">
-				<a class="nav-link" href="#">Donate</a>
-                <a class="nav-link" href="#">Get a donation</a>
-                 <!-- Button -->
-                <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-				<div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                    <a href="Login.html"><button type="button" class="btn btn-primary ms-2" id="loginbutton"><strong>Log in</strong></button></a>
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item active"><a href="index.html" class="nav-link font-italic"> Home </a></li>
-                        <li class="nav-item active"><a href="#" class="nav-link font-italic"> About Us</a></li>
-                        <li class="nav-item active"><a href="Map.html" class="nav-link font-italic">Map </a></li>
-                        <li class="nav-item active"><a href="#" class="nav-link font-italic"> Contact </a></li>
-                    </ul>
-				</div>
-			</div>
-		</nav>
-
-    <!-- Jumbotron -->
-      <div class="p-5 text-center bg-color">
-        <h1 class="display-4 font-weight-light jumbotrons-heading">About Us</h1>
-        <h4 class="mb-3 jumbotrons-subheading">Discover more about who we are and why we chose to build a donations website</h5>
+<body>
+  <!--Navbar-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+    <div class="container-fluid">
+      <a class="nav-link" href="#">Donate</a>
+      <a class="nav-link" href="#">Get a donation</a>
+      <!-- Button -->
+      <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
+        class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarText">
+        <a href="Login.html"><button type="button" class="btn btn-primary ms-2" id="loginbutton"><strong>Log
+              in</strong></button></a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active"><a href="#" class="nav-link font-italic"> Home </a></li>
+          <li class="nav-item active"><a href="AboutPage.html" class="nav-link font-italic"> About Us</a></li>
+          <li class="nav-item active"><a href="Map.html" class="nav-link font-italic"> Map </a></li>
+          <li class="nav-item active"><a href="#" class="nav-link font-italic"> Contact </a></li>
+        </ul>
       </div>
+    </div>
+  </nav>
 
-    <!--Grid-->
-        <div class="bg-white py-5">
-          <div class="container py-5">
-            <div class="row justify-content-center">
-             <div class="row align-items-center mb-5">
-              <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
-                <h2 class="font-weight-light">Who are we?</h2>
-                <p class="font-italic text-muted mb-4">We are a group of students from the Univeristy of Manchester willing to help people like us. In October 2020, we started working together on our first website. If you would like to find out more about each of us, read our blog.</p>
-                <a href="#" class="btn btn-primary px-5 rounded-pill shadow-sm" data-toggle="button" aria-pressed="false" autocomplete="off"><strong>Read Blog</strong></a>
-              </div>
-              <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-            </div>
-            <div class="row align-items-center">
-              <div class="col-lg-5 px-5 mx-auto"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt="" class="img-fluid mb-4 mb-lg-0"></div>
-              <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
-                <h2 class="font-weight-light">Donate or get?</h2>
-                <p class="font-italic text-muted mb-4">Whether you want to donate something or you are in need of something, we are here to help you. Our website is dedicated to students of The University of Manchester. Created during the pandemic, "Pass it on" is an attempt at re-connecting people, enforcing a sense of empathy among those who have been affected by the effects of Covid-19.</p>
-                <a href="index.html" class="btn btn-primary px-5 rounded-pill shadow-sm" role="button" aria-pressed="false" autocomplete="off"><strong>Go to main page</strong></a>
-              </div>
-            </div>
+  <!-- Jumbotron -->
+  <div class="p-5 text-center bg-color">
+    <h1 class="display-4 font-weight-light jumbotrons-heading">About Us</h1>
+    <h4 class="mb-3 jumbotrons-subheading">Discover more about who we are and why we chose to build a donations website
+      </h5>
+  </div>
+
+  <!--Grid-->
+  <div class="bg-white py-5">
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="row align-items-center mb-5">
+          <div class="col-lg-6 order-2 order-lg-1"><i class="fa fa-bar-chart fa-2x mb-3 text-primary"></i>
+            <h2 class="font-weight-light">Who are we?</h2>
+            <p class="font-italic text-muted mb-4">We are a group of students from the Univeristy of Manchester willing
+              to help people like us. In October 2020, we started working together on our first website. If you would
+              like to find out more about each of us, read our blog.</p>
+            <a href="#" class="btn btn-primary px-5 rounded-pill shadow-sm" data-toggle="button" aria-pressed="false"
+              autocomplete="off"><strong>Read Blog</strong></a>
+          </div>
+          <div class="col-lg-5 px-5 mx-auto order-1 order-lg-2"><img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556834139/img-1_e25nvh.jpg" alt=""
+              class="img-fluid mb-4 mb-lg-0"></div>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-5 px-5 mx-auto"><img
+              src="https://res.cloudinary.com/mhmd/image/upload/v1556834136/img-2_vdgqgn.jpg" alt=""
+              class="img-fluid mb-4 mb-lg-0"></div>
+          <div class="col-lg-6"><i class="fa fa-leaf fa-2x mb-3 text-primary"></i>
+            <h2 class="font-weight-light">Donate or get?</h2>
+            <p class="font-italic text-muted mb-4">Whether you want to donate something or you are in need of something,
+              we are here to help you. Our website is dedicated to students of The University of Manchester. Created
+              during the pandemic, "Pass it on" is an attempt at re-connecting people, enforcing a sense of empathy
+              among those who have been affected by the effects of Covid-19.</p>
+            <a href="index.html" class="btn btn-primary px-5 rounded-pill shadow-sm" role="button" aria-pressed="false"
+              autocomplete="off"><strong>Go to main page</strong></a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-light py-5">
+      <div class="container py-5">
+        <div class="row mb-4">
+          <div class="col-lg-5">
+            <h2 class="mb-3 font-weight-light">Our team</h2>
+            <p class="font-italic text-muted">Check out our great team</p>
           </div>
         </div>
 
-<div class="bg-light py-5">
-  <div class="container py-5">
-    <div class="row mb-4">
-      <div class="col-lg-5">
-        <h2 class="mb-3 font-weight-light">Our team</h2>
-        <p class="font-italic text-muted">Check out our great team</p>
+        <div class="row text-center">
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Diana</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Ivan</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Alex S</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Sabreen</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-1_s02nlg.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Alex C</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">Maggie</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+
+          <!-- Team item-->
+          <div class="col-xl-3 col-sm-6 mb-5">
+            <div class="bg-white rounded shadow-sm py-5 px-4"><img
+                src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100"
+                class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
+              <h5 class="mb-0">David</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
+              <ul class="social mb-0 list-inline mt-3">
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
+                <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- End-->
+        </div>
       </div>
     </div>
+</body>
 
-    <div class="row text-center">
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Diana</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Ivan</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-      <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-2_f8dowd.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Alex S</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-    <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Sabreen</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
-
- <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834133/avatar-1_s02nlg.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Alex C</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
- <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834132/avatar-4_ozhrib.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">Maggie</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-
- <!-- Team item-->
-      <div class="col-xl-3 col-sm-6 mb-5">
-        <div class="bg-white rounded shadow-sm py-5 px-4"><img src="https://res.cloudinary.com/mhmd/image/upload/v1556834130/avatar-3_hzlize.png" alt="" width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-          <h5 class="mb-0">David</h5><span class="small text-uppercase text-muted">First-Year CS Student</span>
-          <ul class="social mb-0 list-inline mt-3">
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a href="#" class="social-link"><i class="fa fa-linkedin"></i></a></li>
-          </ul>
-        </div>
-      </div>
-      <!-- End-->
-    </div>
+<footer class="bg-light pb-5">
+  <div class="container text-center">
+    <p class="font-italic text-muted mb-0">&copy; Copyrights. All rights reserved.</p>
   </div>
-</div>
-    </body>
+</footer>
 
-    <footer class="bg-light pb-5">
-      <div class="container text-center">
-        <p class="font-italic text-muted mb-0">&copy; Copyrights. All rights reserved.</p>
-      </div>
-    </footer>
-
-    <script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script>
 
 </html>
 
 
 <style>
-
-/* label {
+  /* label {
         font-weight: 500;
     }*/
 
-.nav-item {
+  .nav-item {
     padding: 7px;
   }
 
-.btn-primary {
+  .btn-primary {
     background-color: #8785db;
     border-color: #8785db;
     border-radius: 50px;
 
-}
-.social-link {
-  width: 30px;
-  height: 30px;
-  border: 1px solid #ddd;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #666;
-  border-radius: 50%;
-  transition: all 0.3s;
-  font-size: 0.9rem;
+  }
 
-}
+  .social-link {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    border-radius: 50%;
+    transition: all 0.3s;
+    font-size: 0.9rem;
 
-.social-link:hover,
-.social-link:focus {
-  background: #8785db;
-  text-decoration: none;
-  color: #555;
-}
-   
+  }
 
+  .social-link:hover,
+  .social-link:focus {
+    background: #8785db;
+    text-decoration: none;
+    color: #555;
+  }
 </style>
