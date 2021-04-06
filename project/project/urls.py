@@ -30,6 +30,8 @@ urlpatterns = [
     path("SignUp", views.SignUp.as_view(), name = 'SignUp'),
 
     path("AddItem", views.AddItemView.as_view(), name = 'AddItem'),
+    path("BrowseItem", views.BrowseItemView.as_view(), name = 'BrowseItem'),
+
     path("AboutPage", views.AboutPageView.as_view(), name = 'AboutPage'),
 
 ]

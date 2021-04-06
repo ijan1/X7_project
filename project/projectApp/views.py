@@ -80,3 +80,16 @@ class AddItemView(View):
 
             return redirect('AddItem')
         return render(request, 'AddItem.html', {'form': form})
+
+class BrowseItemView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "BrowseItem.html")
+
+    def post(self, request, *args, **kwargs):
+        form = forms.BrowseItemForm(request.POST)
+        if form.is_valid():
+            search = form.cleaned_data['search']
+            print("you searched for " + str(search))
+
+            return redirect('BrowseItem')
+        return render(request, 'BrowseItem.html', {'form': form})

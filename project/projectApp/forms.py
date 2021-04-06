@@ -19,3 +19,6 @@ class AddItemForm(forms.Form):
     description = forms.CharField(max_length=500)
     # file =
 
+class BrowseItemForm(forms.Form):
+    search = forms.CharField(max_length=300)
+
