@@ -102,3 +102,7 @@ class CharityView(View):
 class CartPageView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "CartPage.html")
+
+class ItemTemplateView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "ItemTemplate.html")

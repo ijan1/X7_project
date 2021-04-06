@@ -36,6 +36,7 @@ urlpatterns = [
     path("BrowseItem", views.BrowseItemView.as_view(), name = 'BrowseItem'),
     path("Charity", views.CharityView.as_view(), name = 'Charity'),
     path("CartPage", views.CartPageView.as_view(), name = 'CartPage'),
+    path("ItemTemplate", views.ItemTemplateView.as_view(), name = 'ItemTemplate'),
 
     path("AboutPage", views.AboutPageView.as_view(), name = 'AboutPage'),
 
