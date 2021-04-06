@@ -50,6 +50,7 @@ class ForgotPass(View):
         return render(request, 'ForgotPass.html', {'form' : form})
 
 
+'''
 class styles_diana(View):
     def get(self, request, *args, **kwargs):
         return render(request, "bootstrap/css/styles_diana.css")
@@ -58,7 +59,7 @@ class styles_diana(View):
 class bootstrapMin(View):
     def get(self, request, *args, **kwargs):
         return render(request, "bootstrap/css/bootstrap.min.css")
-
+'''
 
 class AboutPageView(View):
     def get(self, request, *args, **kwargs):
@@ -97,3 +98,7 @@ class BrowseItemView(View):
 class CharityView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Charity.html")
+
+class CartPageView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "CartPage.html")
