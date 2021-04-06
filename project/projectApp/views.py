@@ -29,6 +29,15 @@ class ForgotPass(View):
     def get(self, request, *args, **kwargs):
         return render(request, "ForgotPass.html")
 
+    def post(self, request, *args, **kwargs):
+        form = forms.ForgotPassForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            print("the email is " + str(email))
+
+            return redirect('ForgotPass')
+        return render(request, 'ForgotPass.html', {'form' : form})
+
 
 class styles_diana(View):
     def get(self, request, *args, **kwargs):
@@ -37,7 +46,7 @@ class styles_diana(View):
 
 class bootstrapMin(View):
     def get(self, request, *args, **kwargs):
-        return render(request, " bootstrap/css/bootstrap.min.css")
+        return render(request, "bootstrap/css/bootstrap.min.css")
 
 
 class AboutPageView(View):
