@@ -1,0 +1,169 @@
+html,
+body {
+	height: 85%;
+	font-size: 1rem;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+body{
+	overflow-x: hidden;
+}
+
+.gradient{
+	background: rgb(44,62,80,1);
+	background: linear-gradient(
+	90deg, 
+	rgba(44,62,80,1) 0%,
+	rgba(135,133,219,1) 50%, 
+	rgba(45,237,144,1) 100%
+	);
+
+}
+
+.page-header {
+	margin-top: -1.20rem;
+	font-size: 1.25rem;
+	color: #fff;
+}
+
+.bg-color{
+	background-color: #8785db;
+}
+
+.nav-item {
+	padding: 7px;
+}
+
+.btn-primary {
+	background-color: #3dc990;
+	border-color: #3dc990;
+	border-radius: 50px;
+	cursor: pointer;
+
+}
+
+a.nav-link {
+	font-weight: bold;
+	color: #2c3e50;
+}
+
+.jumbotrons-heading {
+	color: #fff;
+	font-size: 3rem;
+	font-family: 'Roboto', sans-serif;
+}
+.jumbotrons-subheading {
+	color: #fff;
+	font-size: 1.25rem;
+	font-family: 'Roboto', sans-serif;
+}
+
+.svg-animation-container {
+	width: 700px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+	padding: 24px;
+	margin: 0 auto;
+	border-radius: 20%;
+	height: 500px;
+}
+
+.svg-animation-container svg {
+	width: 100%;
+}
+#grey {
+	color: rgb(175, 175, 175);
+}
+
+
+#Vector_4 {
+	animation: changeColor 3s infinite 
+	alternate;
+}
+
+#Vector_6 {
+	animation: changeColor 3s infinite 
+	alternate;
+}
+
+#Vector_5 {
+	animation: changeColor 3s infinite 
+	alternate;
+}
+
+
+#Vector_7 {
+	animation: changeColor 3s infinite 
+	alternate;
+}
+
+@keyframes changeColor {
+	0%{
+		fill: red;
+	}
+	100%{
+		fill: blue;
+	}
+}
+
+#Left {
+	animation: rotateLeft 2s infinite alternate;
+	transform-origin: left;
+	transform-box: fill-box;
+}
+
+@keyframes rotateLeft {
+	0% {
+		transform: rotate(-5deg);
+	}
+	70% {
+		transform: rotate(10deg);
+	}
+}
+#loginbutton {
+	width: 90px;
+
+}
+
+
+#Right {
+	animation: rotateRight 2s infinite alternate;
+	transform-origin: left;
+	transform-box: fill-box;
+}
+
+@keyframes rotateRight {
+	0% {
+		transform: rotate(10deg);
+	}
+	70% {
+		transform: rotate(-5deg);
+	}
+}
+
+#Grey-circle {
+	animation: bounce 1s infinite ease-out
+	alternate;
+}
+
+@keyframes bounce{
+	0% {
+		transform: translateY(75px);
+	}
+	100%{
+		transform: translateY(-90px);
+	}
+}
+#loginbutton {
+	width: 90px;
+
+}
+
+
+#aboutbutton {
+
+}
+#accountbutton {
+	width: 230px;
+	height: 50px;
+}
