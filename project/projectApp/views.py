@@ -82,6 +82,7 @@ class AddItemView(View):
             return redirect('AddItem')
         return render(request, 'AddItem.html', {'form': form})
 
+
 class BrowseItemView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "BrowseItem.html")
@@ -95,13 +96,16 @@ class BrowseItemView(View):
             return redirect('BrowseItem')
         return render(request, 'BrowseItem.html', {'form': form})
 
+
 class CharityView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Charity.html")
 
+
 class CartPageView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "CartPage.html")
+    
 
 class ItemTemplateView(View):
     def get(self, request, *args, **kwargs):
