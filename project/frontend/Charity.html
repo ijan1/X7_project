@@ -8,8 +8,8 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
         integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="bootstrap/css/styles_diana.css">
+    <link rel="stylesheet" href="{% url 'bootstrapMin' %}">
+    <link rel="stylesheet" href="{% url 'styles_diana'%}">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
@@ -20,14 +20,14 @@
     <!--Navbar-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
         <div class="container-fluid">
-            <a class="nav-link" href="AddItem.html">Donate</a>
-            <a class="nav-link" href="BrowseItem.html">Get a donation</a>
+            <a class="nav-link" href="{% url 'AddItem' %}">Donate</a>
+            <a class="nav-link" href="{% url 'BrowseItem' %}">Get a donation</a>
             <!-- Button -->
             <button type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"
                 class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
             <div class="collapse navbar-collapse justify-content-end" id="navbarText">
-                <a href="Login.html"><button type="button" class="btn btn-primary ms-2" id="loginbutton"><strong>Log
+                <a href="{% url 'login' %}"><button type="button" class="btn btn-primary ms-2" id="loginbutton"><strong>Log
                             in</strong></button></a>
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="index.html" class="nav-link font-italic"> Home </a></li>

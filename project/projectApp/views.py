@@ -93,3 +93,7 @@ class BrowseItemView(View):
 
             return redirect('BrowseItem')
         return render(request, 'BrowseItem.html', {'form': form})
+
+class CharityView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "Charity.html")
