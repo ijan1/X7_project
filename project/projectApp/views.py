@@ -24,6 +24,17 @@ class SignUp(View):
     def get(self, request, *args, **kwargs):
         return render(request, "SignUp.html")
 
+    def post(self, request, *args, **kwargs):
+        form = forms.SignUpForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            password = form.cleaned_data['password']
+            name = form.cleaned_data['name']
+            print("the email is " + str(email) + " and the pass is " + str(password) + " for the person " + str(name))
+
+            return redirect('SignUp')
+        return render(request, 'SignUp.html', {'form' : form})
+
 
 class ForgotPass(View):
     def get(self, request, *args, **kwargs):
