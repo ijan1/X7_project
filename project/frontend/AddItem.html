@@ -17,14 +17,16 @@
 <body>
 	<div class="row vh-100 align-items-center justify-content-center">
 		<div class="div1">
-			<form>
+			<form method = "POST">
+				{% csrf_token %}
+
 				<h1 class="h2 extrapadding">Add Your Item</h1>
 				<div>
-					<input class="form-control mt-3 mb-3" placeholder="Item Name" required autofocus>
+					<input type="text" class="form-control mt-3 mb-3" placeholder="Item Name" required autofocus name="itemName">
 				</div>
 				<div class="input-group mt-3 mb-3">
 					<input type="text" class="form-control" aria-label="Text input with dropdown button"
-						placeholder="Category">
+						placeholder="Category" name="category">
 					<div class="input-group-append">
 						<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false"></button>
@@ -38,7 +40,7 @@
 				</div>
 				<div class="input-group mt-3 mb-3">
 					<input type="text" class="form-control" aria-label="Text input with dropdown button"
-						placeholder="Condition">
+						placeholder="Condition" name="condition">
 					<div class="input-group-append">
 						<button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown"
 							aria-haspopup="true" aria-expanded="false"></button>
@@ -53,16 +55,16 @@
 
 				<div class="form-group mt-4 mb-4">
 					<textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-						placeholder="Description"></textarea>
+						placeholder="Description" name="description"></textarea>
 				</div>
 
 				<label class="form-label" for="customFile"><i class="fas fa-upload uploadstyle"></i>Upload an Image of
 					the item</label>
-				<input type="file" class="form-control" id="customFile" />
+				<input type="file" class="form-control" id="customFile" name="file" />
 
 
 				<div class="mt-4 mb-3 row align-items-center justify-content-center">
-					<button type="button" class="btn btn-primary btn-lg btn-block purple">Add to shop</button>
+					<button type="submit" class="btn btn-primary btn-lg btn-block purple">Add to shop</button>
 				</div>
 
 			</form>
