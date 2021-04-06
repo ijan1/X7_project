@@ -20,6 +20,26 @@ class LoginView(View):
         return render(request, 'Login.html', {'form' : form})
 
 
+class SignUp(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "SignUp.html")
+
+
+class ForgotPass(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "ForgotPass.html")
+
+
+class styles_diana(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "bootstrap/css/styles_diana.css")
+
+
+class bootstrapMin(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, " bootstrap/css/bootstrap.min.css")
+
+
 class AboutPageView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "AboutPage.html")

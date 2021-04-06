@@ -23,7 +23,13 @@ from projectApp import views
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path("", views.AddItemView.as_view(), name = 'AddItem'),
-    path("", views.AboutPageView.as_view(), name = 'AboutPage'),
-    path("", views.LoginView.as_view(), name = "login"),
+    path("login", views.LoginView.as_view(), name = 'login'),
+    path("styles_diana", views.styles_diana.as_view(), name = 'styles_diana'),
+    path("boostrapMin", views.bootstrapMin.as_view(), name = 'bootstrapMin'),
+    path("ForgotPass", views.ForgotPass.as_view(), name = 'ForgotPass'),
+    path("SignUp", views.SignUp.as_view(), name = 'SignUp'),
+
+    path("AddItem", views.AddItemView.as_view(), name = 'AddItem'),
+    path("AboutPage", views.AboutPageView.as_view(), name = 'AboutPage'),
+
 ]
