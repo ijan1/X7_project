@@ -21,6 +21,9 @@ from . import index
 
 from projectApp import views
 
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     #path('admin/', admin.site.urls),
     path("login", views.LoginView.as_view(), name = 'login'),
