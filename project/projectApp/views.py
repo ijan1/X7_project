@@ -147,3 +147,7 @@ class MapView(View):
 class indexView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "index.html")
+
+class DonationPageView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "DonationPage.html")

@@ -43,5 +43,6 @@ urlpatterns = [
     path("Decision", views.DecisionView.as_view(), name = 'Decision'),
     path("Contact", views.ContactView.as_view(), name = 'Contact'),
     path("Map", views.MapView.as_view(), name = 'Map'),
+    path("DonationPage", views.DonationPageView.as_view(), name = 'DonationPage'),
 
 ]
