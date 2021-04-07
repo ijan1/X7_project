@@ -77,9 +77,12 @@ class AddItemView(View):
             category = form.cleaned_data['category']
             condition = form.cleaned_data['condition']
             description = form.cleaned_data['description']
+            #file = form.cleaned_data['file']
             print("the item " + str(itemName) + " with category " + str(category) + " and condition " + str(condition) + " and description " + str(description))
 
             return redirect('AddItem')
+        else:
+            print("error")
         return render(request, 'AddItem.html', {'form': form})
 
 

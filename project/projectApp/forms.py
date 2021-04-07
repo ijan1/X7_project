@@ -1,4 +1,5 @@
 from django import forms
+from django.db import models
 
 class LoginForm(forms.Form):
     password = forms.CharField(max_length=300)
@@ -17,7 +18,7 @@ class AddItemForm(forms.Form):
     category = forms.CharField(max_length=300)
     condition = forms.CharField(max_length=300)
     description = forms.CharField(max_length=500)
-    # file =
+    #file = forms.FileField()
 
 class BrowseItemForm(forms.Form):
     search = forms.CharField(max_length=300)
