@@ -8,8 +8,9 @@
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
 		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-	<link rel="stylesheet" href="bootstrap/css/styles_diana.css">
+    {% load static %}
+	<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+	<link rel="stylesheet" href="{% static 'css/styles_diana.css' %}">
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.0/font/bootstrap-icons.css">
 	<link rel="preconnect" href="https://fonts.gstatic.com">
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto&display=swap">
@@ -17,11 +18,11 @@
 </head>
 
 <body>
-	<form class="row g-3 needs-validation" novalidate>
+	<form class="row g-3 needs-validation" novalidate method="POST">
 		<div class="col-md-4">
 			<div>
 				<label for="itemName" class="form-label">Item name</label>
-				<input type="text" class="form-control" id="itemName" required>
+				<input type="text" class="form-control" id="itemName" required name="itemName">
 				<div class="invalid-feedback">
 					Please enter a name!
 				</div>
@@ -30,7 +31,7 @@
 
 			<div id="image-1">
 				<label for="image-1" class="form-label">Image 1</label>
-				<input type="file" class="form-control" accept="image/*" required>
+				<input type="file" class="form-control" accept="image/*" required name="image">
 				<div class="invalid-feedback">
 					Please attach an image!
 				</div>
@@ -38,7 +39,7 @@
 
 			<div>
 				<label class="form-label" for="categorySelect">Category</label>
-				<select class="form-select" id="categorySelect">
+				<select class="form-select" id="categorySelect" name="type">
 					<option value="1">Furniture</option>
 					<option value="2">Books</option>
 					<option value="3">Canned food</option>
@@ -48,7 +49,7 @@
 
 			<div>
 				<label for="itemDescription" class="form-label">Enter a sentence or two describing the item.</label>
-				<textarea maxlength="150" class="form-control" id="itemDescription" rows="3"></textarea>
+				<textarea maxlength="150" class="form-control" id="itemDescription" rows="3" name="description"></textarea>
 			</div>
 
 
