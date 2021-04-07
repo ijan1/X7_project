@@ -32,6 +32,7 @@ class SignUp(View):
             name = form.cleaned_data['name']
             print("the email is " + str(email) + " and the pass is " + str(password) + " for the person " + str(name))
 
+
             return redirect('SignUp')
         return render(request, 'SignUp.html', {'form' : form})
 
@@ -121,3 +122,18 @@ class DecisionView(View):
 class DonateItemView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "DonateItem.html")
+
+class ContactView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "Contact.html")
+
+    def post(self, request, *args, **kwargs):
+        form = forms.ContactForm(request.POST)
+        if form.is_valid():
+            email = form.cleaned_data['email']
+            subject = form.cleaned_data['subject']
+            message = form.cleaned_data['message']
+            print("the email is " + str(email) + " and the subject is " + str(subject) + " and typed the message " + str(message))
+
+            return redirect('Contact')
+        return render(request, 'Contact.html', {'form' : form})

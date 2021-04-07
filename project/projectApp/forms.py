@@ -23,3 +23,7 @@ class AddItemForm(forms.Form):
 class BrowseItemForm(forms.Form):
     search = forms.CharField(max_length=300)
 
+class ContactForm(forms.Form):
+    email = forms.CharField(max_length=300)
+    subject = forms.CharField(max_length=300)
+    message = forms.CharField(max_length=500)
