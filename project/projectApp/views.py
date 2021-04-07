@@ -123,6 +123,7 @@ class DonateItemView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "DonateItem.html")
 
+
 class ContactView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Contact.html")
@@ -137,3 +138,8 @@ class ContactView(View):
 
             return redirect('Contact')
         return render(request, 'Contact.html', {'form' : form})
+
+
+class MapView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "Map.html")

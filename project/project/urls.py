@@ -41,5 +41,6 @@ urlpatterns = [
     path("DonateItem", views.DonateItemView.as_view(), name = 'DonateItem'),
     path("Decision", views.DecisionView.as_view(), name = 'Decision'),
     path("Contact", views.ContactView.as_view(), name = 'Contact'),
+    path("Map", views.MapView.as_view(), name = 'Map'),
 
 ]
