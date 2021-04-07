@@ -110,3 +110,11 @@ class CartPageView(View):
 class ItemTemplateView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "ItemTemplate.html")
+
+class DecisionView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "Decision.html")
+
+class DonateItemView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "DonateItem.html")
