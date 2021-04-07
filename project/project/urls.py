@@ -26,6 +26,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     #path('admin/', admin.site.urls),
+    path("index", views.indexView.as_view(), name = 'index'),
     path("login", views.LoginView.as_view(), name = 'login'),
     #path("styles_diana", views.styles_diana.as_view(), name = 'styles_diana'),
     #path("bootstrapMin", views.bootstrapMin.as_view(), name = 'bootstrapMin'),

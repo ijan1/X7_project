@@ -143,3 +143,7 @@ class ContactView(View):
 class MapView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Map.html")
+
+class indexView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "index.html")

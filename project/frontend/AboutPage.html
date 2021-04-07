@@ -31,7 +31,7 @@
         <a href="{% url 'login' %}"><button type="button" class="btn btn-primary ms-2" id="loginbutton"><strong>Log
               in</strong></button></a>
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active"><a href="index.html" class="nav-link font-italic"> Home </a></li>
+          <li class="nav-item active"><a href="{% url 'index' %}" class="nav-link font-italic"> Home </a></li>
           <li class="nav-item active"><a href="{% url 'AboutPage' %}" class="nav-link font-italic"> About Us</a></li>
           <li class="nav-item active"><a href="{% url 'Map' %}" class="nav-link font-italic"> Map </a></li>
           <li class="nav-item active"><a href="{% url 'Contact' %}" class="nav-link font-italic"> Contact </a></li>
@@ -74,7 +74,7 @@
               we are here to help you. Our website is dedicated to students of The University of Manchester. Created
               during the pandemic, "Pass it on" is an attempt at re-connecting people, enforcing a sense of empathy
               among those who have been affected by the effects of Covid-19.</p>
-            <a href="index.html" class="btn btn-primary px-5 rounded-pill shadow-sm" role="button" aria-pressed="false"
+            <a href="{% url 'index' %}" class="btn btn-primary px-5 rounded-pill shadow-sm" role="button" aria-pressed="false"
               autocomplete="off"><strong>Go to main page</strong></a>
           </div>
         </div>
@@ -210,7 +210,8 @@
 </footer>
 <!-->
 
-<script src="bootstrap/js/bootstrap.min.js"></script>
+{% load static %}
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 </html>
 
