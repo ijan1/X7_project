@@ -3,6 +3,8 @@ from django.views.generic import View
 
 from projectApp import forms
 
+from django.core.files.storage import FileSystemStorage
+
 # Create your views here.
 
 class LoginView(View):
@@ -72,20 +74,28 @@ class AddItemView(View):
         return render(request, "AddItem.html")
 
     def post(self, request, *args, **kwargs):
-        form = forms.AddItemForm(request.POST)
+        form = forms.AddItemForm(request.POST, request.FILES)
         if form.is_valid():
             itemName = form.cleaned_data['itemName']
             category = form.cleaned_data['category']
             condition = form.cleaned_data['condition']
             description = form.cleaned_data['description']
-            #file = form.cleaned_data['file']
-            print("the item " + str(itemName) + " with category " + str(category) + " and condition " + str(condition) + " and description " + str(description))
+            file = form.cleaned_data['file']
+            fs = FileSystemStorage()
+            filename = fs.save(file.name, file)
+            print("the item " + str(itemName) + " with category " + str(category) + " and condition " + str(
+                condition) + " and description " + str(description) + " and filename " + str(file))
 
             return redirect('AddItem')
         else:
             print("error")
         return render(request, 'AddItem.html', {'form': form})
 
+        '''if request.FILES['file']:
+            print("YES")
+            print(request.FILES['file'])
+            return redirect('AddItem')
+        '''
 
 class BrowseItemView(View):
     def get(self, request, *args, **kwargs):

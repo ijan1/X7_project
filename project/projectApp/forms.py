@@ -18,7 +18,7 @@ class AddItemForm(forms.Form):
     category = forms.CharField(max_length=300)
     condition = forms.CharField(max_length=300)
     description = forms.CharField(max_length=500)
-    #file = forms.FileField()
+    file = forms.FileField()
 
 class BrowseItemForm(forms.Form):
     search = forms.CharField(max_length=300)
