@@ -18,6 +18,9 @@ class LoginView(View):
             password = form.cleaned_data['password']
             print("the email is " + str(email) + " and the pass is " + str(password))
 
+            if email == 'a@b.com' and password == '123':
+                return redirect('Decision')
+
             return redirect('login')
         return render(request, 'Login.html', {'form' : form})
 
