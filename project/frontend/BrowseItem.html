@@ -53,6 +53,7 @@
 
 
 	<div class="row justify-content-center mt-5 pt-5 mb-5">
+		{% for i in list %}
 		<div class="card ms-5">
 			<a href="#!">
 				{% load static %}
@@ -61,37 +62,14 @@
 				<!-- <div class="card-body"> -->
 			</a>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Category</li>
+				<li class="list-group-item">Category {{i}}</li>
 				<li class="list-group-item">Condition</li>
 				<li class="list-group-item">Pickup Location</li>
 			</ul>
 			<!-- </div> -->
 		</div>
-		<div class="card ms-5">
-			<a href="#!">
-				<img src="{% static 'boxes.jpg' %}" class="card-img-top" alt="item" data-bs-toggle="modal"
-					data-bs-target="#shopModal">
-				<!-- <div class="card-body"> -->
-			</a>
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Category</li>
-				<li class="list-group-item">Condition</li>
-				<li class="list-group-item">Pickup Location</li>
-			</ul>
-			<!-- </div> -->
-		</div>
-		<div class="card ms-5">
-			<a href="#!">
-				<img src="{% static 'boxes.jpg' %}" class="card-img-top" alt="item" data-bs-toggle="modal"
-					data-bs-target="#shopModal">
-				<!-- <div class="card-body"> -->
-			</a>
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Category</li>
-				<li class="list-group-item">Condition</li>
-				<li class="list-group-item">Pickup Location</li>
-			</ul>
-			<!-- </div> -->
+		{% endfor %}
+
 		</div>
 		<div class="modal fade" id="shopModal" tabindex="-1">
 			<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">

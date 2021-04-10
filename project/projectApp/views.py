@@ -18,6 +18,9 @@ class LoginView(View):
             password = form.cleaned_data['password']
             print("the email is " + str(email) + " and the pass is " + str(password))
 
+            if email == 'a@b.com' and password == '123':
+                return redirect('Decision')
+
             return redirect('login')
         return render(request, 'Login.html', {'form' : form})
 
@@ -98,8 +101,12 @@ class AddItemView(View):
         '''
 
 class BrowseItemView(View):
+    def __init__(self):
+        self.context = {'list' : [1] * 4}
+
     def get(self, request, *args, **kwargs):
-        return render(request, "BrowseItem.html")
+
+        return render(request, "BrowseItem.html", context=self.context)
 
     def post(self, request, *args, **kwargs):
         form = forms.BrowseItemForm(request.POST)
@@ -108,7 +115,8 @@ class BrowseItemView(View):
             print("you searched for " + str(search))
 
             return redirect('BrowseItem')
-        return render(request, 'BrowseItem.html', {'form': form})
+
+        return render(request, 'BrowseItem.html', {'form': form}, context=self.context)
 
 
 class CharityView(View):
