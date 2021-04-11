@@ -7,6 +7,17 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
+import sqlite3
+
+connection = sqlite3.connect('data.db')
+cursor = connection.cursor()
+
+cursor.execute('CREATE TABLE IF NOT EXISTS users(name text primary key, email text, password text)')
+connection.commit()
+
+connection.close()
+
+
 class LoginView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "Login.html")
@@ -14,11 +25,23 @@ class LoginView(View):
     def post(self, request, *args, **kwargs):
         form = forms.LoginForm(request.POST)
         if form.is_valid():
-            email = form.cleaned_data['email']
-            password = form.cleaned_data['password']
+            email = str(form.cleaned_data['email'])
+            password = str(form.cleaned_data['password'])
             print("the email is " + str(email) + " and the pass is " + str(password))
 
-            if email == 'a@b.com' and password == '123':
+            connection = sqlite3.connect('data.db')
+            cursor = connection.cursor()
+
+            cursor.execute('SELECT * FROM users')
+            users = cursor.fetchall()
+            loginTheUser = False
+            for pretenderName, pretenderEmail, pretenderPassword in users:
+                if pretenderEmail == email and pretenderPassword == password:
+                    loginTheUser = True
+
+            connection.close()
+
+            if loginTheUser:
                 return redirect('Decision')
 
             return redirect('login')
@@ -37,6 +60,13 @@ class SignUp(View):
             name = form.cleaned_data['name']
             print("the email is " + str(email) + " and the pass is " + str(password) + " for the person " + str(name))
 
+            connection = sqlite3.connect('data.db')
+            cursor = connection.cursor()
+
+            cursor.execute(f'INSERT INTO users VALUES("{name}", "{email}", "{password}")')
+            connection.commit()
+
+            connection.close()
 
             return redirect('SignUp')
         return render(request, 'SignUp.html', {'form' : form})
