@@ -53,25 +53,21 @@
 
 
 	<div class="row justify-content-center mt-5 pt-5 mb-5">
-		{% for i in list %}
+		{% for itemName, category, condition, description, fileName in items %}
 		<div class="card ms-5">
 			<a href="#!">
-				{% load static %}
-				<img src="{% static 'boxes.jpg' %}" class="card-img-top" alt="item" data-bs-toggle="modal"
+				<img src="{{fileName}}" class="card-img-top" alt="item" data-bs-toggle="modal"
 					data-bs-target="#shopModal">
 				<!-- <div class="card-body"> -->
 			</a>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Category {{i}}</li>
-				<li class="list-group-item">Condition</li>
+				<li class="list-group-item">Category {{category}}</li>
+				<li class="list-group-item">Condition {{condition}}</li>
 				<li class="list-group-item">Pickup Location</li>
 			</ul>
 			<!-- </div> -->
-		</div>
-		{% endfor %}
 
-		</div>
-		<div class="modal fade" id="shopModal" tabindex="-1">
+			<div class="modal fade" id="shopModal" tabindex="-1">
 			<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -80,12 +76,17 @@
 					<div class="modal-body">
 						<div class="ratio ratio-16x9">
 
-							<iframe src="{% static 'ItemTemplate.html' %}" title="%Itemname page" allowfullscreen></iframe>
+							<iframe src="ItemTemplate.html" title="%Itemname page" allowfullscreen></iframe>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		</div>
+		{% endfor %}
+
+		</div>
+
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"

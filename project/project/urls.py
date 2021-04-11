@@ -46,4 +46,4 @@ urlpatterns = [
     path("Map", views.MapView.as_view(), name = 'Map'),
     path("DonationPage", views.DonationPageView.as_view(), name = 'DonationPage'),
 
-]
+] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

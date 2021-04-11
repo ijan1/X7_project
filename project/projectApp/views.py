@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect
 from django.views.generic import View
 
 from projectApp import forms
+from project import settings
 
 from django.core.files.storage import FileSystemStorage
 
@@ -102,6 +103,15 @@ class AboutPageView(View):
         return render(request, "AboutPage.html")
 
 
+connection = sqlite3.connect('data.db')
+cursor = connection.cursor()
+
+cursor.execute('CREATE TABLE IF NOT EXISTS items(name itemName primary key, category text, condition text, description text, fileName text)')
+connection.commit()
+
+connection.close()
+
+
 class AddItemView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "AddItem.html")
@@ -119,6 +129,14 @@ class AddItemView(View):
             print("the item " + str(itemName) + " with category " + str(category) + " and condition " + str(
                 condition) + " and description " + str(description) + " and filename " + str(file))
 
+            connection = sqlite3.connect('data.db')
+            cursor = connection.cursor()
+
+            cursor.execute(f'INSERT INTO items VALUES("{itemName}", "{category}", "{condition}", "{description}", "{file.name}")')
+            connection.commit()
+
+            connection.close()
+
             return redirect('AddItem')
         else:
             print("error")
@@ -132,21 +150,30 @@ class AddItemView(View):
 
 class BrowseItemView(View):
     def __init__(self):
-        self.context = {'list' : [1] * 4}
+        connection = sqlite3.connect('data.db')
+        cursor = connection.cursor()
+
+        cursor.execute('SELECT * FROM items')
+        self.items = cursor.fetchall()
+        self.items = [(itemName, category, condition, description, str(settings.MEDIA_URL) + str(fileName)) for
+                      itemName, category, condition, description, fileName in self.items]
+        self.context = {'items' : self.items}
+
+        connection.close()
 
     def get(self, request, *args, **kwargs):
-
+        self.__init__()
         return render(request, "BrowseItem.html", context=self.context)
 
     def post(self, request, *args, **kwargs):
         form = forms.BrowseItemForm(request.POST)
         if form.is_valid():
             search = form.cleaned_data['search']
+            self.items = [(itemName, category, condition, description, fileName) for itemName, category, condition, description, fileName in self.items if itemName == search]
             print("you searched for " + str(search))
 
-            return redirect('BrowseItem')
-
-        return render(request, 'BrowseItem.html', {'form': form}, context=self.context)
+        self.context = {'items': self.items, 'form': form}
+        return render(request, 'BrowseItem.html', context=self.context)
 
 
 class CharityView(View):
