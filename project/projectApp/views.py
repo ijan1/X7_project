@@ -146,7 +146,7 @@ class AddItemView(View):
 
             connection.close()
 
-            return redirect('AddItem')
+            return redirect('BrowseItem')
         else:
             print("error")
         return render(request, 'AddItem.html', {'form': form})
