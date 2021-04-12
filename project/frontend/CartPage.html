@@ -63,8 +63,9 @@
                 <form method="POST">
                     {% csrf_token %}
                     {% for itemName in items %}
+                    <input value="{{itemName}}" type="hidden" name="cart"/>
                     <tr style="border-bottom: 1px solid black">
-                    <td style="width:90%"><input value="{{itemName}}" name="cart"/></td>
+                    <td style="width:90%">{{itemName}}</td>
                     <td style="width:20%"><button type="submit" style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletecart.png' %}" alt="Remove from cart"></button></td></tr>
                     <tr style="border-bottom: 1px solid black">
 

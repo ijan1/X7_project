@@ -109,7 +109,7 @@
                 						<li><i class="fas fa-map-marker-alt fa-lg iconstyle"></i><span class="fontstyle">UoM student services</span></li>
 										<form method="POST">
 											{% csrf_token %}
-											<input value="{{itemName}}" name="cart"/><button type="submit" class="btn btn-primary mt-5 float-end"><i class="fas fa-cart-plus shoppingstyle"></i>Add to Cart</button>
+											<input value="{{itemName}}" type="hidden" name="cart"/><button type="submit" class="btn btn-primary mt-5 float-end"><i class="fas fa-cart-plus shoppingstyle"></i>Add to Cart</button>
 										</form>
 									</ul>
 								</div>
