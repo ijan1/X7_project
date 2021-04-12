@@ -120,8 +120,17 @@ class AddItemView(View):
         form = forms.AddItemForm(request.POST, request.FILES)
         if form.is_valid():
             itemName = form.cleaned_data['itemName']
+
+            categories = ['Home', 'Bathroom', 'Living Area', 'Other']
             category = form.cleaned_data['category']
+            category = int(category[-1]) - 1
+            category = categories[category]
+
+            conditions = ['3 months', '6 months', '9 months', '12 months']
             condition = form.cleaned_data['condition']
+            condition = int(condition[-1]) - 1
+            condition = conditions[condition]
+
             description = form.cleaned_data['description']
             file = form.cleaned_data['file']
             fs = FileSystemStorage()
