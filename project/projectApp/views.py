@@ -18,6 +18,7 @@ connection.commit()
 
 connection.close()
 
+cart = []
 
 class LoginView(View):
     def get(self, request, *args, **kwargs):
@@ -175,10 +176,16 @@ class BrowseItemView(View):
         return render(request, "BrowseItem.html", context=self.context)
 
     def post(self, request, *args, **kwargs):
+        submitbutton = request.POST.get('cart')
+        if submitbutton:
+            cart.append(submitbutton)
+            print("item " + submitbutton + " has been added")
+
         form = forms.BrowseItemForm(request.POST)
         if form.is_valid():
             search = form.cleaned_data['search']
-            self.items = [(itemName, category, condition, description, fileName) for itemName, category, condition, description, fileName in self.items if itemName == search]
+            if search:
+                self.items = [(itemName, category, condition, description, fileName) for itemName, category, condition, description, fileName in self.items if itemName == search]
             print("you searched for " + str(search))
 
         self.context = {'items': self.items, 'form': form}
@@ -192,8 +199,21 @@ class CharityView(View):
 
 class CartPageView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, "CartPage.html")
+        return render(request, "CartPage.html", context={'items' : cart})
     
+    def post(self, request, *args, **kwargs):
+        submitbutton = request.POST.get('cart')
+        if submitbutton:
+            toremove = 0
+            for index in range(len(cart)):
+                if cart[index] == submitbutton:
+                    toremove = index
+                    break
+            cart.pop(toremove)
+            print("item " + submitbutton + " has been removed")
+
+        return render(request, "CartPage.html", context={'items' : cart})
+
 
 class ItemTemplateView(View):
     def get(self, request, *args, **kwargs):
