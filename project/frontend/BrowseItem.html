@@ -61,9 +61,9 @@
 				<!-- <div class="card-body"> -->
 			</a>
 			<ul class="list-group list-group-flush">
-				<li class="list-group-item">Category {{category}}</li>
-				<li class="list-group-item">Condition {{condition}}</li>
-				<li class="list-group-item">Pickup Location</li>
+				<li class="list-group-item">Category: {{category}}</li>
+				<li class="list-group-item">Condition: {{condition}}</li>
+				<li class="list-group-item">Pickup Location: UoM student services</li>
 			</ul>
 			<!-- </div> -->
 
@@ -76,7 +76,41 @@
 					<div class="modal-body">
 						<div class="ratio ratio-16x9">
 
-							<iframe src="ItemTemplate.html" title="%Itemname page" allowfullscreen></iframe>
+							<!-- <iframe src="ItemTemplate.html" title="%Itemname page" allowfullscreen></iframe> -->
+							<div class="row justify-content-center mt-4">
+								<div class="col-4">
+									<h1 class="h2 mb-4">{{itemName}}</h1>
+									<div id="thumbnailPreview" class="carousel carousel-dark slide" data-bs-ride="carousel">
+										<div class="carousel-inner">
+											<div class="carousel-item active" data-bs-interval="10000">
+												<img src="{% static 'boxes.jpg' %}" class="d-block w-100" alt="...">
+											</div>
+											<div class="carousel-item">
+												<img src="{% static 'boxes2.jpg' %}" class="d-block w-100" alt="...">
+											</div>
+										</div>
+										<a class="carousel-control-prev" href="#thumbnailPreview" data-bs-slide="prev">
+											<span class="carousel-control-prev-icon"></span>
+										</a>
+										<a class="carousel-control-next" href="#thumbnailPreview" data-bs-slide="next">
+											<span class="carousel-control-next-icon"></span>
+										</a>
+									</div>
+									<div>
+										<p class="pt-4">Description</p>
+										<p class="description mb-5">{{description}}</p>
+									</div>
+								</div>
+								<!-- <img class="img-fluid" alt="item1" src="boxes.jpg"> -->
+								<div class="col-4 d-flex align-items-center justify-content-center widthadjust">
+									<ul id="iconlist">
+										<li><i class="fas fa-bookmark fa-lg iconstyle" id="elementID"></i><span class="fontstyle">{{category}}</span></li>
+                						<li><i class="fas fa-wrench fa-lg iconstyle"></i><span class="fontstyle">{{condition}}</span></li>
+                						<li><i class="fas fa-map-marker-alt fa-lg iconstyle"></i><span class="fontstyle">UoM student services</span></li>
+										<button type="button" class="btn btn-primary mt-5 float-end"><i class="fas fa-cart-plus shoppingstyle"></i>Add to Cart</button>
+									</ul>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -100,9 +134,10 @@
 	}
 
 	.btn-primary {
-		background-color: #8785db;
-		border-color: #8785db;
-		border-radius: 50px;
+		background-color: #c6c4fd;
+		border-color: black;
+		border-radius: 20px;
+		color: black;
 	}
 
 	a.nav-link {
@@ -121,6 +156,17 @@
 
 	}
 
+	img {
+        border-radius: 10px;
+    }
+
+
+    .description {
+        font-size: 12px;
+        color: grey;
+        line-height: 15px;
+    }
+
 	.card {
 		width: 280px;
 		padding: 0px;
@@ -129,4 +175,29 @@
 	.form-control {
 		width: 15em;
 	}
+
+	.iconstyle {
+        padding: 25px;
+        font-size: 25px;
+    }
+
+	#iconlist {
+        list-style: none;
+    }
+
+	.widthadjust {
+        width: auto;
+        height: auto;
+    }
+
+	.fontstyle {
+        font-size: 1.3em;
+        padding-left: 15px;
+    }
+
+	.shoppingstyle {
+        padding-right: 15px;
+        color: black;
+
+    }
 </style>
