@@ -53,11 +53,11 @@
 	</div>
 
 	<div class="row justify-content-center mt-5 pt-5 mb-5">
-		{% for itemName, category, condition, description, fileName in items %}
+		{% for index, itemName, category, condition, description, fileName in items %}
 		<div class="card ms-5">
 			<a href="#!">
 				<img src="{{fileName}}" class="card-img-top" alt="item" data-bs-toggle="modal"
-					data-bs-target="#shopModal{{itemName}}">
+					data-bs-target="#shopModal{{index}}">
 				<!-- <div class="card-body"> -->
 			</a>
 			<ul class="list-group list-group-flush">
@@ -67,7 +67,7 @@
 			</ul>
 			<!-- </div> -->
 
-			<div class="modal fade" id="shopModal{{itemName}}" tabindex="-1">
+			<div class="modal fade" id="shopModal{{index}}" tabindex="-1">
 			<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">

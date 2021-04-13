@@ -175,8 +175,8 @@ class BrowseItemView(View):
 
         cursor.execute('SELECT * FROM items')
         self.items = cursor.fetchall()
-        self.items = [(itemName, category, condition, description, str(settings.MEDIA_URL) + str(fileName)) for
-                      itemName, category, condition, description, fileName in self.items]
+        self.items = [ (index, itemName, category, condition, description, str(settings.MEDIA_URL) + str(fileName)) for
+                      index, (itemName, category, condition, description, fileName) in enumerate(self.items)]
         self.LIMIT = 5
         self.reachedLimit = False
         self.context = {'items' : self.items, 'reachedLimit' : self.reachedLimit}
