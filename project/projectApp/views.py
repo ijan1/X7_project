@@ -195,8 +195,14 @@ class BrowseItemView(View):
                 self.reachedLimit = True
                 print("You're too greedy bro", self.reachedLimit)
             else:
-                cart.append(submitbutton)
-                print("item " + submitbutton + " has been added")
+                added = False
+                for itemName in cart:
+                    if itemName == submitbutton:
+                        print("Already added")
+                        added = True
+                if not added:
+                    cart.append(submitbutton)
+                    print("item " + submitbutton + " has been added")
 
         form = forms.BrowseItemForm(request.POST)
         if form.is_valid():
