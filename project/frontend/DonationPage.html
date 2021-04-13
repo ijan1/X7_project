@@ -84,26 +84,12 @@
                 <td style="width:70%">
                     <table style="border-collapse:collapse;width:90%;border:1px solid black;border-radius: 25px">
                         {% load static %}
+                        {% for item in donations %}
                         <tr style="border-bottom: 1px solid black">
-                            <td style="width:90%">item1</td>
-                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletedonation.png' %}" alt="Remove from donation"></button></td>
+                            <td style="width:90%">{{item}}</td>
+                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"></button></td>
                         </tr>
-                        <tr style="border-bottom: 1px solid black">
-                            <td style="width:90%">item2</td>
-                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletedonation.png' %}" alt="Remove from donation"></button></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid black">
-                            <td style="width:90%">item3</td>
-                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletedonation.png' %}" alt="Remove from donation"></button></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid black">
-                            <td style="width:90%">item4</td>
-                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletedonation.png' %}" alt="Remove from donation"></button></td>
-                        </tr>
-                        <tr style="border-bottom: 1px solid black">
-                            <td style="width:90%">item5</td>
-                            <td style="width:20%"><button style="background-color:Transparent;background-repeat:no-repeat;border:none;cursor:pointer;overflow:hidden;outline:none"><img src="{% static 'deletedonation.png' %}" alt="Remove from donation"></button></td>
-                        </tr>
+                        {% endfor %}
             </tr>
         </table>
         </td>

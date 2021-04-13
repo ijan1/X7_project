@@ -19,6 +19,7 @@ connection.commit()
 connection.close()
 
 cart = []
+donations = []
 
 class LoginView(View):
     def get(self, request, *args, **kwargs):
@@ -147,6 +148,8 @@ class AddItemView(View):
 
             connection.close()
 
+            donations.append(itemName)
+
             return redirect('BrowseItem')
         else:
             print("error")
@@ -167,7 +170,7 @@ class BrowseItemView(View):
         self.items = cursor.fetchall()
         self.items = [(itemName, category, condition, description, str(settings.MEDIA_URL) + str(fileName)) for
                       itemName, category, condition, description, fileName in self.items]
-        self.LIMIT = 3
+        self.LIMIT = 5
         self.reachedLimit = False
         self.context = {'items' : self.items, 'reachedLimit' : self.reachedLimit}
 
@@ -275,4 +278,4 @@ class indexView(View):
 
 class DonationPageView(View):
     def get(self, request, *args, **kwargs):
-        return render(request, "DonationPage.html")
+        return render(request, "DonationPage.html", {'donations' : donations})
