@@ -167,7 +167,9 @@ class BrowseItemView(View):
         self.items = cursor.fetchall()
         self.items = [(itemName, category, condition, description, str(settings.MEDIA_URL) + str(fileName)) for
                       itemName, category, condition, description, fileName in self.items]
-        self.context = {'items' : self.items}
+        self.LIMIT = 3
+        self.reachedLimit = False
+        self.context = {'items' : self.items, 'reachedLimit' : self.reachedLimit}
 
         connection.close()
 
@@ -177,9 +179,14 @@ class BrowseItemView(View):
 
     def post(self, request, *args, **kwargs):
         submitbutton = request.POST.get('cart')
+        self.reachedLimit = False
         if submitbutton:
-            cart.append(submitbutton)
-            print("item " + submitbutton + " has been added")
+            if len(cart) == self.LIMIT:
+                self.reachedLimit = True
+                print("You're too greedy bro", self.reachedLimit)
+            else:
+                cart.append(submitbutton)
+                print("item " + submitbutton + " has been added")
 
         form = forms.BrowseItemForm(request.POST)
         if form.is_valid():
@@ -188,7 +195,7 @@ class BrowseItemView(View):
                 self.items = [(itemName, category, condition, description, fileName) for itemName, category, condition, description, fileName in self.items if itemName == search]
             print("you searched for " + str(search))
 
-        self.context = {'items': self.items, 'form': form}
+        self.context = {'items': self.items, 'form': form, 'reachedLimit' : self.reachedLimit}
         return render(request, 'BrowseItem.html', context=self.context)
 
 

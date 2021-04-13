@@ -121,6 +121,12 @@
 		</div>
 		</div>
 		{% endfor %}
+
+		{% if reachedLimit %}
+		<script>
+			alert("Item limit reached(5). Before adding more items please remove some of the existing ones from your cart.");
+		</script>
+		{% endif%}
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
