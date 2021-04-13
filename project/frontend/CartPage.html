@@ -80,7 +80,11 @@
             <td style="width:10%"></td>
             <td><a class="nav-link" href="{% url 'BrowseItem' %}"><button type="button" class="btn btn-primary mt-5 float-end">back to search</button></td>
             <td style="width:60%"></a></td>
-            <td><button type="button" class="btn btn-primary mt-5 float-end">checkout</button></td>
+            <form method="POST">
+                {% csrf_token %}
+                <input value="checkout" type="hidden" name="checkout"/>
+                <td><button type="submit" class="btn btn-primary mt-5 float-end">checkout</button></td>
+            </form>
 
         </tr>
     </table>

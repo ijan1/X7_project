@@ -202,6 +202,8 @@ class CartPageView(View):
         return render(request, "CartPage.html", context={'items' : cart})
     
     def post(self, request, *args, **kwargs):
+        global cart
+
         submitbutton = request.POST.get('cart')
         if submitbutton:
             toremove = 0
@@ -211,6 +213,18 @@ class CartPageView(View):
                     break
             cart.pop(toremove)
             print("item " + submitbutton + " has been removed")
+
+        checkout = request.POST.get('checkout')
+        if checkout:
+            for item in cart:
+                connection = sqlite3.connect('data.db')
+                cursor = connection.cursor()
+
+                cursor.execute(f'DELETE FROM items WHERE name="{item}"')
+                connection.commit()
+
+                connection.close()
+            cart = []
 
         return render(request, "CartPage.html", context={'items' : cart})
 
