@@ -22,10 +22,17 @@ cart = []
 donations = []
 
 class LoginView(View):
+    def __init__(self):
+        global cart, donations
+        cart = []
+        donations = []
+
     def get(self, request, *args, **kwargs):
+        self.__init__()
         return render(request, "Login.html")
 
     def post(self, request, *args, **kwargs):
+        self.__init__()
         form = forms.LoginForm(request.POST)
         if form.is_valid():
             email = str(form.cleaned_data['email'])
