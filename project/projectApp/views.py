@@ -202,7 +202,7 @@ class BrowseItemView(View):
         if form.is_valid():
             search = form.cleaned_data['search']
             if search:
-                self.items = [(itemName, category, condition, description, fileName) for itemName, category, condition, description, fileName in self.items if itemName == search]
+                self.items = [(index, itemName, category, condition, description, fileName) for index, itemName, category, condition, description, fileName in self.items if itemName == search]
             print("you searched for " + str(search))
 
         self.context = {'items': self.items, 'form': form, 'reachedLimit' : self.reachedLimit}
