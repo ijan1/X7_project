@@ -57,7 +57,7 @@
 		<div class="card ms-5">
 			<a href="#!">
 				<img src="{{fileName}}" class="card-img-top" alt="item" data-bs-toggle="modal"
-					data-bs-target="#shopModal">
+					data-bs-target="#shopModal{{itemName}}">
 				<!-- <div class="card-body"> -->
 			</a>
 			<ul class="list-group list-group-flush">
@@ -67,7 +67,7 @@
 			</ul>
 			<!-- </div> -->
 
-			<div class="modal fade" id="shopModal" tabindex="-1">
+			<div class="modal fade" id="shopModal{{itemName}}" tabindex="-1">
 			<div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
 				<div class="modal-content">
 					<div class="modal-header">
@@ -121,12 +121,6 @@
 		</div>
 		</div>
 		{% endfor %}
-
-		{% if reachedLimit %}
-		<script>
-			alert("Item limit reached(5). Before adding more items please remove some of the existing ones from your cart.");
-		</script>
-		{% endif%}
 	</div>
 
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
