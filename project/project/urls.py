@@ -45,5 +45,7 @@ urlpatterns = [
     path("Contact", views.ContactView.as_view(), name = 'Contact'),
     path("Map", views.MapView.as_view(), name = 'Map'),
     path("DonationPage", views.DonationPageView.as_view(), name = 'DonationPage'),
+    path("AfterCheckout", views.AfterCheckoutView.as_view(), name='AfterCheckout'),
+    path("AfterDonating", views.AfterDonatingView.as_view(), name='AfterDonating'),
 
 ] + static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)

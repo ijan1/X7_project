@@ -157,7 +157,7 @@ class AddItemView(View):
 
             donations.append(itemName)
 
-            return redirect('BrowseItem')
+            return redirect('AfterDonating')
         else:
             print("error")
         return render(request, 'AddItem.html', {'form': form})
@@ -249,6 +249,8 @@ class CartPageView(View):
                 connection.close()
             cart = []
 
+            return redirect("AfterCheckout")
+
         return render(request, "CartPage.html", context={'items' : cart})
 
 
@@ -292,3 +294,11 @@ class indexView(View):
 class DonationPageView(View):
     def get(self, request, *args, **kwargs):
         return render(request, "DonationPage.html", {'donations' : donations})
+
+class AfterCheckoutView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "AfterCheckout.html")
+
+class AfterDonatingView(View):
+    def get(self, request, *args, **kwargs):
+        return render(request, "AfterDonating.html")
