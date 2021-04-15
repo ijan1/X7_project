@@ -59,13 +59,21 @@ class LoginView(View):
 
 
 class SignUp(View):
+    def __init__(self):
+        self.notManchesterEmail = False
+
     def get(self, request, *args, **kwargs):
+        self.__init__()
         return render(request, "SignUp.html")
 
     def post(self, request, *args, **kwargs):
         form = forms.SignUpForm(request.POST)
         if form.is_valid():
             email = form.cleaned_data['email']
+            if (not "manchester" in email) and (not "Manchester" in email):
+                self.notManchesterEmail = True
+                return render(request, 'SignUp.html', {'notManchesterEmail' : self.notManchesterEmail})
+
             password = form.cleaned_data['password']
             name = form.cleaned_data['name']
             print("the email is " + str(email) + " and the pass is " + str(password) + " for the person " + str(name))
@@ -78,8 +86,8 @@ class SignUp(View):
 
             connection.close()
 
-            return redirect('SignUp')
-        return render(request, 'SignUp.html', {'form' : form})
+            return redirect('login')
+        return render(request, 'SignUp.html', {'form' : form, 'notManchesterEmail' : self.notManchesterEmail})
 
 
 class ForgotPass(View):
@@ -208,7 +216,8 @@ class BrowseItemView(View):
         if form.is_valid():
             search = form.cleaned_data['search']
             if search:
-                self.items = [(index, itemName, category, condition, description, fileName) for index, itemName, category, condition, description, fileName in self.items if itemName == search]
+                search = search.lower()
+                self.items = [(index, itemName, category, condition, description, fileName) for index, itemName, category, condition, description, fileName in self.items if search in itemName.lower() or search in category.lower() or search in condition.lower() or search in description.lower()]
             print("you searched for " + str(search))
 
         self.context = {'items': self.items, 'form': form, 'reachedLimit' : self.reachedLimit}
