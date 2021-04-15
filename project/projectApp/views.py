@@ -143,7 +143,7 @@ class AddItemView(View):
             category = int(category[-1]) - 1
             category = categories[category]
 
-            conditions = ['3 months', '6 months', '9 months', '12 months']
+            conditions = ['Excellent condition', 'Good condition', 'Fair condition', 'Poor condition']
             condition = form.cleaned_data['condition']
             condition = int(condition[-1]) - 1
             condition = conditions[condition]
